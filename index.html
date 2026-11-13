@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente de Marketing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor-principal">
+    <!-- Parte 1 del boceto: zona de chat (contenedor principal donde se muestran los mensajes) -->
+    <section id="zona-de-chat" class="zona-de-chat" aria-label="zona de chat">
+      <div id="lista-mensajes" class="lista-mensajes" role="log" aria-live="polite">
+        <article class="mensaje mensaje-agente">
+          <p class="texto-mensaje">Hola, soy tu agente de marketing. Contame qué producto o servicio ofrecés y armamos estrategias y propaganda para vender más.</p>
+        </article>
+      </div>
+
+      <!-- Parte 2 del boceto: zona de escritura (ubicada en la parte inferior dentro del contenedor) -->
+      <form id="zona-de-escritura" class="zona-de-escritura" aria-label="zona de escritura">
+        <div class="campo-contenedor">
+          <textarea
+            id="campo-mensaje"
+            class="campo-mensaje"
+            rows="2"
+            maxlength="500"
+            placeholder="Escribí tu consulta o idea de campaña..."
+            aria-label="Mensaje para el agente de marketing"
+            required
+          ></textarea>
+          <span id="contador-caracteres" class="contador-caracteres">0/500</span>
+        </div>
+        <button type="submit" id="boton-enviar" class="boton-enviar">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Carga obligatoria de config.js antes que script.js -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
